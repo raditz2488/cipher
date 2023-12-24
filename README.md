@@ -26,7 +26,7 @@ Eg:
 
 ### Execute the command from anywhere:
 
-You might wonder can we not use `swift run` before the `cipher` command. The answer is yes. In order to do that you need to make the cipher command available to global level.
+You might wonder can we not use `swift run` before the `cipher` command. The answer is yes. In order to do that you need to make the cipher command available to global level. Here you can go to any folder and encrypt and decrypt any text files
 
 #### Here's how to do that:
 * Build the package for release
@@ -34,3 +34,20 @@ You might wonder can we not use `swift run` before the `cipher` command. The ans
 * Copy the build to the bin folder
   * `cp -f .build/release/cipher /usr/local/bin/cipher`
 
+Now you can use the following commands without `swift run`
+
+#### Encrypt
+
+`cipher <REPLACE_WITH_PASSWORD> -i <InFile> -o <OutFile>`
+
+Eg: 
+
+`cipher sdfg123 -i Sample.txt -o SampleEncrypted.txt`
+
+#### Decrypt
+
+`cipher <REPLACE_WITH_PASSWORD> -i <InFile> -o <OutFile> -d` 
+
+Eg:
+
+`cipher sdfg123 -i SampleEncryped.txt -o SampleDecrypted.txt -d`
