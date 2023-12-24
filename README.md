@@ -13,6 +13,7 @@ We need to use `swift run` to build and execute the command everytime. Also note
 `swift run cipher <REPLACE_WITH_PASSWORD> -i <InFile> -o <OutFile>`
 
 Eg: 
+
 `swift run cipher sdfg123 -i Sample.txt -o SampleEncrypted.txt`
 
 #### Decrypt
